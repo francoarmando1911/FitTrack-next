@@ -4,12 +4,12 @@ import Link from "next/link"
 export default function FitTracker() {
 
   const weekDays = [
-    { day: "Lunes", color: "default", link: "/lunes" },
-    { day: "Martes", color: "default", link: "/martes" },
-    { day: "Miércoles", color: "default", link: "/miercoles" },
-    { day: "Jueves", color: "default", link: "/jueves" },
-    { day: "Viernes", color: "default", link: "/viernes" },
-    { day: "Sábado", color: "default", link: "/sabado" },
+    { day: "Lunes", color: "default", link: "/paginaDia" },
+    { day: "Martes", color: "default", link: "/paginaDia" },
+    { day: "Miércoles", color: "default", link: "/paginaDia" },
+    { day: "Jueves", color: "default", link: "/paginaDia" },
+    { day: "Viernes", color: "default", link: "/paginaDia" },
+    { day: "Sábado", color: "default", link: "/paginaDia" },
   ]
 
   return (

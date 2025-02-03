@@ -4,12 +4,12 @@ import Link from "next/link"
 export default function FitTracker() {
 
   const weekDays = [
-    { day: "Lunes", color: "default", link: "/paginaDia" },
-    { day: "Martes", color: "default", link: "/paginaDia" },
-    { day: "Miércoles", color: "default", link: "/paginaDia" },
-    { day: "Jueves", color: "default", link: "/paginaDia" },
-    { day: "Viernes", color: "default", link: "/paginaDia" },
-    { day: "Sábado", color: "default", link: "/paginaDia" },
+    { day: "Lunes", color: "default", link: "/paginaDia/[day]" },
+    { day: "Martes", color: "default", link: "/paginaDia/Martes" },
+    { day: "Miércoles", color: "default", link: "/paginaDia/Miercoles" },
+    { day: "Jueves", color: "default", link: "/paginaDia/Jueves" },
+    { day: "Viernes", color: "default", link: "/paginaDia/Viernes" },
+    { day: "Sábado", color: "default", link: "/paginaDia/Sabado" },
   ]
 
   return (
@@ -31,7 +31,7 @@ export default function FitTracker() {
             <div className="p-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
                 {weekDays.map((item) => (
-                  <Link href={item.link} key={item.day}>
+                  <Link href={`/paginaDia/${item.day}`} key={item.day}>
                     <button
                       className="w-full h-16 text-lg bg-slate-300 hover:bg-rose-500 rounded-xl transition-all ease-in-out transform hover:scale-105"
                     >

@@ -14,13 +14,14 @@ export default function FitTracker() {
 
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-b from-rose-500 to-orange-600">
+      <div className="min-h-screen pt-5 bg-gradient-to-b from-rose-500 to-orange-600">
         <div className="container mx-auto px-4 py-8">
           <div className="max-w-2xl mx-auto bg-white/95 backdrop-blur-sm rounded-xl shadow-lg">
             <div className="text-center space-y-2 py-6">
               <h1 className="text-4xl font-bold tracking-tight flex items-center justify-center gap-2">
                 <span className="w-8 h-8 text-gray-800">🏋️‍♂️</span>
-                FitTrack app 2025
+                FitTrack
+                <span className="w-8 h-8 text-gray-800">💪🏼</span>
               </h1>
               <div className="flex items-center justify-center gap-2 text-gray-500">
                 <span className="w-5 h-5 text-gray-800">📅</span>

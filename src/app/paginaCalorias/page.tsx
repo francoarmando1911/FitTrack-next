@@ -1,10 +1,15 @@
-import CaloriesComponent from '@/components/CaloriesComponent'
-import React from 'react'
+"use client";
 
-export default function page() {
+import { useReducer } from "react";
+import CaloriesComponent from "@/components/CaloriesComponent";
+import { activityReducer, initialState } from "@/reducers/activity-reducers";
+
+export default function Page() {
+  const [state, dispatch] = useReducer(activityReducer, initialState);
+
   return (
     <div>
-        <CaloriesComponent/>
+      <CaloriesComponent dispatch={dispatch} state={state} />
     </div>
-  )
+  );
 }

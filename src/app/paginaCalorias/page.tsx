@@ -3,6 +3,7 @@
 import { useReducer } from "react";
 import CaloriesComponent from "@/components/CaloriesComponent";
 import { activityReducer, initialState } from "@/reducers/activity-reducers";
+import ResumeCaloriesComponent from "@/components/ResumeCaloriesComponent";
 
 export default function Page() {
   const [state, dispatch] = useReducer(activityReducer, initialState);
@@ -10,6 +11,7 @@ export default function Page() {
   return (
     <div>
       <CaloriesComponent dispatch={dispatch} state={state} />
+      <ResumeCaloriesComponent/>
     </div>
   );
 }

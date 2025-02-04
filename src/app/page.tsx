@@ -50,15 +50,15 @@ export default function FitTracker() {
                 Registrar calorías
               </h1>
               <div className="flex pt-3 items-center justify-center gap-2 text-gray-800">
-                <Link href="/paginaCalorias" className="inline-block px-6 py-2 bg-slate-300 hover:bg-rose-500 rounded-xl transition-all ease-in-out transform hover:scale-105 text-sm sm:text-base shadow-md focus:outline-none focus:ring-2">
+                <Link href="/paginaCalorias" className="inline-block px-8 py-3 bg-slate-300 hover:bg-rose-500 rounded-xl transition-all ease-in-out transform hover:scale-105 text-sm sm:text-base shadow-md focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2">
                   Registrar
                 </Link>
               </div>
             </div>
-            
+
           </div>
         </div>
-        
+
       </div>
       <FooterComponent />
     </>

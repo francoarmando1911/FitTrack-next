@@ -10,7 +10,7 @@ export default function ResumeCaloriesComponent() {
                     Resumen de Calorías
                 </h2>
 
-                <div className="flex flex-col items-center md:flex-row md:justify-between gap-5 w-full max-w-4xl">
+                <div className="flex flex-col items-center gap-8 md:flex-row md:justify-between md:gap-5 w-full">
                     <div className="bg-white text-center p-6 rounded-lg shadow-lg w-full md:w-auto">
                         <p className="text-xl font-bold text-gray-800 mb-3">
                             <span className="font-black text-6xl text-orange-500">250 </span>
@@ -25,6 +25,6 @@ export default function ResumeCaloriesComponent() {
                 </div>
             </div>
         </section>
-        
     );
+
 }

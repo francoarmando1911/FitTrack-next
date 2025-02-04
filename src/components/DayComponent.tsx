@@ -26,7 +26,19 @@ const DayComponent: React.FC<DailyRoutineProps> = ({ day }) => {
   const [editIndex, setEditIndex] = useState<number | null>(null);
 
   useEffect(() => {
-    localStorage.setItem(day, JSON.stringify(exercises));
+    // Verificar si estamos en el navegador
+    if (typeof window !== "undefined") {
+      const storedExercises = localStorage.getItem(day);
+      if (storedExercises) {
+        setExercises(JSON.parse(storedExercises));
+      }
+    }
+  }, [day]);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem(day, JSON.stringify(exercises));
+    }
   }, [exercises, day]);
 
   const addOrUpdateExercise = () => {
@@ -74,7 +86,7 @@ const DayComponent: React.FC<DailyRoutineProps> = ({ day }) => {
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-2xl mx-auto bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-6">
           <div className="text-center space-y-2 py-6">
-            <h2 className="text-4xl font-bold tracking-tight">{day}</h2>
+            <h2 className="text-4xl font-bold text-black tracking-tight">{`/paginaDia/${day}`}</h2>
           </div>
 
           <div className="flex flex-col md:flex-row gap-2">

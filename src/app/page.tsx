@@ -4,7 +4,7 @@ import Link from "next/link"
 export default function FitTracker() {
 
   const weekDays = [
-    { day: "Lunes", color: "default", link: "/paginaDia/[day]" },
+    { day: "Lunes", color: "default", link: "/paginaDia/Lunes" },
     { day: "Martes", color: "default", link: "/paginaDia/Martes" },
     { day: "Miércoles", color: "default", link: "/paginaDia/Miercoles" },
     { day: "Jueves", color: "default", link: "/paginaDia/Jueves" },

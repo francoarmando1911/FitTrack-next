@@ -6,10 +6,10 @@ export default function FitTracker() {
   const weekDays = [
     { day: "Lunes", color: "default", link: "/paginaDia/Lunes" },
     { day: "Martes", color: "default", link: "/paginaDia/Martes" },
-    { day: "Miércoles", color: "default", link: "/paginaDia/Miercoles" },
+    { day: "Miercoles", color: "default", link: "/paginaDia/Miercoles" },
     { day: "Jueves", color: "default", link: "/paginaDia/Jueves" },
     { day: "Viernes", color: "default", link: "/paginaDia/Viernes" },
-    { day: "Sábado", color: "default", link: "/paginaDia/Sabado" },
+    { day: "Sabado", color: "default", link: "/paginaDia/Sabado" },
   ]
 
   return (
@@ -19,9 +19,7 @@ export default function FitTracker() {
           <div className="max-w-2xl mx-auto bg-white/95 backdrop-blur-sm rounded-xl shadow-lg">
             <div className="text-center space-y-2 py-6">
               <h1 className="text-4xl font-bold tracking-tight flex items-center justify-center gap-2">
-                <span className="w-8 h-8 text-gray-800">🏋️‍♂️</span>
                 FitTrack
-                <span className="w-8 h-8 text-gray-800">💪🏼</span>
               </h1>
               <div className="flex items-center justify-center gap-2 text-gray-500">
                 <span className="w-5 h-5 text-gray-800">📅</span>

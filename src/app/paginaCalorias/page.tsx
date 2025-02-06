@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <div>
       <CaloriesComponent dispatch={dispatch} state={state} />
-      <ResumeCaloriesComponent/>
+      <ResumeCaloriesComponent activities={state.activities || []} />
       <FooterComponent/>
     </div>
   );

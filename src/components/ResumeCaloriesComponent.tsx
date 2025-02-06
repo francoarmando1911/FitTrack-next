@@ -1,8 +1,24 @@
 "use client";
 
-import React from "react";
+import React, { useMemo } from "react";
+import { Activity } from "@/types";
 
-export default function ResumeCaloriesComponent() {
+type CalorieTrackerProps = {
+    activities: Activity[];
+};
+
+export default function ResumeCaloriesComponent({ activities }: CalorieTrackerProps) {
+    // Calcular calorías consumidas y quemadas
+    const caloriesConsumed = useMemo(
+        () => (activities ?? []).reduce((total, activity) => (activity.category === 1 ? total + activity.calories : total), 0),
+        [activities]
+    );
+
+    const caloriesBurned = useMemo(
+        () => (activities ?? []).reduce((total, activity) => (activity.category === 2 ? total + activity.calories : total), 0),
+        [activities]
+    );
+
     return (
         <section className="bg-gray-800 min-h-screen flex items-center justify-center px-4 py-10">
             <div className="container mx-auto max-w-lg bg-white/95 backdrop-blur-md rounded-2xl shadow-xl p-8">
@@ -10,21 +26,26 @@ export default function ResumeCaloriesComponent() {
                     Resumen de Calorías
                 </h2>
 
-                <div className="flex flex-col items-center gap-8 md:flex-row md:justify-between md:gap-5 w-full">
-                    <div className="bg-white text-center p-6 rounded-lg shadow-lg w-full md:w-auto">
-                        <p className="text-xl font-bold text-gray-800 mb-3">
-                            <span className="font-black text-6xl text-orange-500">250 </span>
-                            Consumidas en alimentos
-                        </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {/* Tarjeta de Calorías Consumidas */}
+                    <div className="bg-white text-center p-6 rounded-lg shadow-lg">
+                        <p className="text-xl font-bold text-gray-800">Calorías Consumidas</p>
+                        <span className="block text-6xl font-black text-orange-500">
+                            {caloriesConsumed.toLocaleString()}
+                        </span>
+                        <p className="text-gray-600 text-lg">en alimentos</p>
+                    </div>
 
-                        <p className="text-xl font-bold text-gray-800 mb-3">
-                            <span className="font-black text-6xl text-orange-500">250 </span>
-                            Quemadas en ejercicio
-                        </p>
+                    {/* Tarjeta de Calorías Quemadas */}
+                    <div className="bg-white text-center p-6 rounded-lg shadow-lg">
+                        <p className="text-xl font-bold text-gray-800">Calorías Quemadas</p>
+                        <span className="block text-6xl font-black text-orange-500">
+                            {caloriesBurned.toLocaleString()}
+                        </span>
+                        <p className="text-gray-600 text-lg">en ejercicio</p>
                     </div>
                 </div>
             </div>
         </section>
     );
-
 }

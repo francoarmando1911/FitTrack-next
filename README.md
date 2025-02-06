@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FitTrack - Seguimiento de Rutinas y Calorías
 
-## Getting Started
+## Descripción del Proyecto
 
-First, run the development server:
+**FitTrack** es una aplicación web diseñada para el seguimiento de rutinas de gimnasio y el registro de calorías consumidas y quemadas. Permite visualizar los días de la semana, agregar ejercicios con detalles personalizados y llevar un control de la ingesta calórica y el gasto energético a través de una interfaz intuitiva.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Características
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Planificación y Seguimiento de Rutinas
+- **Planificación semanal**: Visualiza todos los días de la semana y selecciona uno para gestionar tu rutina.
+- **Registro de ejercicios**: Agrega ejercicios con detalles como peso, repeticiones y series.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Seguimiento de Calorías
+- **Registro de calorías consumidas**: Ingresa los alimentos que consumes y la cantidad de calorías asociadas.
+- **Registro de calorías quemadas**: Registra las calorías quemadas durante el ejercicio.
+- **Resumen calórico**: Consulta un balance entre calorías ingeridas y quemadas.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Almacenamiento y Experiencia de Usuario
+- **Persistencia de datos**: Los datos se almacenan de forma local para un acceso rápido.
+- **Interfaz responsiva**: Diseñada para una experiencia fluida en dispositivos móviles y escritorio.
+- **Redirección entre secciones**: Accede fácilmente a la planificación de rutinas y el seguimiento de calorías según la selección del usuario.
 
-## Learn More
+## Tecnologías Utilizadas
 
-To learn more about Next.js, take a look at the following resources:
+- **Next.js** (v15.1.6): Framework de React para optimización del rendimiento y generación de páginas dinámicas.
+- **React**: Para la creación de la interfaz de usuario.
+- **TypeScript**: Para una programación tipada y más segura.
+- **Tailwind CSS**: Para un diseño moderno, responsivo y fácil de personalizar.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**FitTrack** es una herramienta ideal para quienes buscan mejorar su rendimiento en el gimnasio y controlar su ingesta calórica de manera sencilla y eficiente.

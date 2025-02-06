@@ -14,7 +14,7 @@ export default function Page() {
     <div>
       <CaloriesComponent dispatch={dispatch} state={state} />
       <ResumeCaloriesComponent activities={state.activities || []} />
-      <ActivityList/>
+      <ActivityList activities={state.activities} dispatch={dispatch} />
       <FooterComponent/>
     </div>
   );

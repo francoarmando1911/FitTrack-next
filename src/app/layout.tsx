@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "FitTrack app",
   description: "FitTrack Next js",
   icons: {
-    icon: '/favicon.png',
+    icon: '/FitTrack.png',
     apple: '/FitTrack.png',
   },
 };

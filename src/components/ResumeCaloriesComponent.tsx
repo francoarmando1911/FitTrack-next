@@ -30,7 +30,7 @@ export default function ResumeCaloriesComponent({ activities }: CalorieTrackerPr
                     {/* Tarjeta de Calorías Consumidas */}
                     <div className="bg-white text-center p-6 rounded-lg shadow-lg">
                         <p className="text-xl font-bold text-gray-800">Calorías Consumidas</p>
-                        <span className="block text-6xl font-black text-orange-500">
+                        <span className="block text-6xl font-black text-orange-600">
                             {caloriesConsumed.toLocaleString()}
                         </span>
                         <p className="text-gray-600 text-lg">en alimentos</p>
@@ -39,7 +39,7 @@ export default function ResumeCaloriesComponent({ activities }: CalorieTrackerPr
                     {/* Tarjeta de Calorías Quemadas */}
                     <div className="bg-white text-center p-6 rounded-lg shadow-lg">
                         <p className="text-xl font-bold text-gray-800">Calorías Quemadas</p>
-                        <span className="block text-6xl font-black text-orange-500">
+                        <span className="block text-6xl font-black text-orange-600">
                             {caloriesBurned.toLocaleString()}
                         </span>
                         <p className="text-gray-600 text-lg">en ejercicio</p>

@@ -101,40 +101,54 @@ const DayComponent: React.FC<DailyRoutineProps> = ({ day }) => {
           </div>
 
           <div className="flex flex-col md:flex-row gap-2">
-            <input
-              type="text"
-              placeholder="Nombre del ejercicio"
-              value={exerciseName}
-              onChange={(e) => setExerciseName(e.target.value)}
-              className="border p-2 rounded-md w-full"
-            />
-            <input
-              type="text"
-              placeholder="Repeticiones"
-              value={exerciseReps}
-              onChange={(e) => setExerciseReps(e.target.value)}
-              className="border p-2 rounded-md w-full"
-            />
-            <input
-              type="text"
-              placeholder="Peso"
-              value={exerciseWeight}
-              onChange={(e) => setExerciseWeight(e.target.value)}
-              className="border p-2 rounded-md w-full"
-            />
-            <input
-              type="text"
-              placeholder="Series"
-              value={exerciseSeries}
-              onChange={(e) => setExerciseSeries(e.target.value)}
-              className="border p-2 rounded-md w-full"
-            />
-            <button
-              onClick={addOrUpdateExercise}
-              className="bg-blue-500 text-white p-2 rounded-md"
-            >
-              {editIndex !== null ? "Actualizar" : "Agregar"}
-            </button>
+            <Drawer>
+              <DrawerTrigger className="bg-white rounded-xl p-4 sm:p-6 md:p-10 text-center shadow-md">
+                Registrar Ejercicio
+              </DrawerTrigger>
+              <DrawerContent className="p-6">
+                <DrawerHeader>
+                  <DrawerTitle>Registrar ejercicio</DrawerTitle>
+                  <DrawerDescription>Registre cada ejercicio de su rutina</DrawerDescription>
+                </DrawerHeader>
+
+                <div className="flex flex-col gap-4">
+                  <input
+                    type="text"
+                    value={exerciseName}
+                    onChange={(e) => setExerciseName(e.target.value)}
+                    placeholder="Nombre del ejercicio"
+                    className="border rounded-md p-2 w-full"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Repeticiones"
+                    value={exerciseReps}
+                    onChange={(e) => setExerciseReps(e.target.value)}
+                    className="border rounded-md p-2 w-full"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Peso"
+                    value={exerciseWeight}
+                    onChange={(e) => setExerciseWeight(e.target.value)}
+                    className="border rounded-md p-2 w-full"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Series"
+                    value={exerciseSeries}
+                    onChange={(e) => setExerciseSeries(e.target.value)}
+                    className="border rounded-md p-2 w-full"
+                  />
+                </div>
+                <DrawerFooter className="mt-4 flex gap-2">
+                  <Button type="submit" className="w-full">Registrar</Button>
+                  <DrawerClose className="w-full">
+                    <Button variant="outline" className="w-full">Cancelar</Button>
+                  </DrawerClose>
+                </DrawerFooter>
+              </DrawerContent>
+            </Drawer>
           </div>
 
           <ul className="mt-6 space-y-3">
@@ -167,22 +181,6 @@ const DayComponent: React.FC<DailyRoutineProps> = ({ day }) => {
             ))}
           </ul>
         </div>
-        <Drawer>
-          <DrawerTrigger className="bg-white rounded-xl p-10">Registrar Ejercicio</DrawerTrigger>
-          <DrawerContent>
-            <DrawerHeader>
-              <DrawerTitle>Prueba Drawer</DrawerTitle>
-              <DrawerDescription>This action cannot be undone.</DrawerDescription>
-            </DrawerHeader>
-            <DrawerFooter>
-              <Button>Submit</Button>
-              <DrawerClose>
-                <Button variant="outline">Cancel</Button>
-              </DrawerClose>
-            </DrawerFooter>
-          </DrawerContent>
-        </Drawer>
-
       </div>
     </div>
   );

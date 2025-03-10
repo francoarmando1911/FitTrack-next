@@ -1,6 +1,17 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer"
 
 interface Exercise {
   name: string;
@@ -156,6 +167,22 @@ const DayComponent: React.FC<DailyRoutineProps> = ({ day }) => {
             ))}
           </ul>
         </div>
+        <Drawer>
+          <DrawerTrigger className="bg-white rounded-xl p-10">Registrar Ejercicio</DrawerTrigger>
+          <DrawerContent>
+            <DrawerHeader>
+              <DrawerTitle>Prueba Drawer</DrawerTitle>
+              <DrawerDescription>This action cannot be undone.</DrawerDescription>
+            </DrawerHeader>
+            <DrawerFooter>
+              <Button>Submit</Button>
+              <DrawerClose>
+                <Button variant="outline">Cancel</Button>
+              </DrawerClose>
+            </DrawerFooter>
+          </DrawerContent>
+        </Drawer>
+
       </div>
     </div>
   );

@@ -142,7 +142,9 @@ const DayComponent: React.FC<DailyRoutineProps> = ({ day }) => {
                   />
                 </div>
                 <DrawerFooter className="mt-4 flex gap-2">
-                  <Button type="submit" className="w-full">Registrar</Button>
+                  <Button type="submit" className="w-full" onClick={addOrUpdateExercise}>
+                    Registrar
+                  </Button>
                   <DrawerClose className="w-full">
                     <Button variant="outline" className="w-full">Cancelar</Button>
                   </DrawerClose>
@@ -151,6 +153,7 @@ const DayComponent: React.FC<DailyRoutineProps> = ({ day }) => {
             </Drawer>
           </div>
 
+  
           <ul className="mt-6 space-y-3">
             {exercises.map((exercise, index) => (
               <li
@@ -187,3 +190,6 @@ const DayComponent: React.FC<DailyRoutineProps> = ({ day }) => {
 };
 
 export default DayComponent;
+
+
+

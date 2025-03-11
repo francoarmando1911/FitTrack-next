@@ -12,7 +12,7 @@ export default function SplashScreen({ onFinish }: { onFinish: () => void }) {
     }, [imageLoaded, onFinish]);
 
     return (
-        <div className="fixed inset-0 flex items-center justify-center bg-red-500 transition-opacity duration-500">
+        <div className="fixed inset-0 flex items-center justify-center bg-[#ff3131] transition-opacity duration-500">
             <Image
                 src="/FitTrack.png"
                 alt="FitTrack Logo"

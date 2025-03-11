@@ -33,6 +33,7 @@ export default function RootLayout({
                   ? String(metadata.icons.icon)
                   : "/default-icon.png"
           }
+          className="bg-red-600"
         />
 
       </head>

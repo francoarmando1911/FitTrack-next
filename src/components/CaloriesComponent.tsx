@@ -8,9 +8,6 @@ import { Activity } from '@/types'
 import { categories } from '@/data/categories'
 import { ActivityActions, ActivityState } from '@/reducers/activity-reducers'
 
-
-
-
 type FormProps = {
   dispatch: Dispatch<ActivityActions>,
   state: ActivityState
